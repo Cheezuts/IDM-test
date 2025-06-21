@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDM Entreprise - Dépannage Climatisation Arles | Pompe à Chaleur | Traitement de l'Eau</title>
+    <meta name="description" content="IDM Entreprise - Spécialiste dépannage climatisation à Arles, Saint-Rémy-de-Provence, Tarascon. Installation pompe à chaleur, ballon thermodynamique, traitement de l'eau. Intervention rapide 06 75 38 37 56">
+    <meta name="keywords" content="dépannage climatisation Arles, pompe à chaleur Arles, traitement eau Arles, ballon thermodynamique, Saint-Rémy-de-Provence, Tarascon, Nîmes, Salon de Provence">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #32b4cf;
+            padding: 1rem 2rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            height: 50px;
+            width: 120px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+
+
+.logo-banner {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    background: url('Background logo IDM Entreprise.jpg') center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5.5rem 0 2.5rem 0; /* Ajoute de l'espace en haut pour la navbar */
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-banner-img {
+    width: 330px;
+    height: 356px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    max-width: 90vw;
+    max-height: 60vw;
+}
+
+@media (min-width: 768px) {
+    .logo-banner-img {
+        width: 500px;
+        height: 500px;
+        max-width: 100vw;
+        max-height: 100vw;
+    }
+}
+
+        .logo-navbar {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            background: white;
+            color: #32b4cf;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::after {
+            width: 80%;
+            background: #32b4cf;
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .burger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            transition: 0.3s;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height: 100vh;
+            background: #32b4cf;
+            z-index: 1001;
+            transition: left 0.3s ease;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+
+        .sidebar.active {
+            left: 0;
+            /* transparence */
+            background: rgba(50, 180, 207, 0.5);
+        }
+
+        .sidebar-header {
+            background: white;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+
+        .sidebar-logo {
+            height: 40px;
+            width: 100px;            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .sidebar-links {
+            padding: 2rem 0;
+        }
+
+        .sidebar-links a {
+            display: block;
+            padding: 1rem 2rem;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .sidebar-links a:hover {
+            background: #f0f0f0;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 30vh;
+            background: linear-gradient(135deg, rgba(50, 180, 207, 0.8), rgba(50, 180, 207, 0.6)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%2387CEEB" width="1200" height="800"/><circle fill="%23228B22" cx="200" cy="200" r="80"/><circle fill="%2332CD32" cx="400" cy="150" r="60"/><circle fill="%23228B22" cx="600" cy="300" r="100"/><circle fill="%2332CD32" cx="800" cy="200" r="70"/><circle fill="%23228B22" cx="1000" cy="350" r="90"/><rect fill="%23228B22" x="100" y="600" width="1000" height="200" rx="20"/></svg>');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-logo {
+            width: 200px;
+            height: 120px;            
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .cta-button {
+            background: white;
+            color: #32b4cf;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            animation: fadeIn 1s ease;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            color: #32b4cf;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-text h3 {
+            color: #32b4cf;
+            margin: 2rem 0 1rem 0;
+            font-size: 1.5rem;
+        }
+
+        .about-text ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .about-text li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .about-text li::before {
+            content: '✓';
+            color: #32b4cf;
+            font-weight: bold;
+            position: absolute;
+            left: -1.5rem;
+        }
+
+        .about-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .placeholder-img {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #32b4cf, #64c7d9);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Services Section */
+        .services {
+            background: #f8f9fa;
+            padding: 6rem 2rem;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            color: #32b4cf;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.service-card {
+    width: 100%;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(50,180,207,0.07);
+    padding: 2rem 1.5rem;
+    margin: 0 auto;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.service-card-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .service-card-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .service-card {
+        padding: 1.2rem 0.5rem;
+    }
+}
+ /*
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+*/
+
+.service-img {
+    width: 590px;
+    height: 375px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+    background: #f0f0f0;
+}
+
+@media (max-width: 1024px) {
+    .service-img {
+        width: 344px;
+        height: 262px;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-img {
+        width: 255px;
+        height: 162px;
+        margin-bottom: 1rem;
+    }
+}
+
+.service-info {
+    flex: 1;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .service-card-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .service-img {
+        margin-bottom: 1rem;
+    }
+    .service-info {
+        text-align: center;
+    }
+}
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: #32b4cf;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            text-align: center;
+            color: #32b4cf;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Contact Form */
+        .contact {
+            padding: 6rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            color: #32b4cf;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #32b4cf;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            background: #32b4cf;
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: #2a9bb5;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-column h3 {
+            color: #32b4cf;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            color: #ccc;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-column a:hover {
+            color: #32b4cf;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #999;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .burger {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .navbar {
+                padding: 1rem;
+            }
+        }
+
+        /* Hidden SEO content */
+        .seo-hidden {
+            position: absolute;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hidden SEO Content -->
+    <div class="seo-hidden">
+        <h1>Dépannage climatisation à Arles et dans toutes les villes environnantes</h1>
+        <p>Raphèle les Arles, Saint-Rémy-de-Provence, Barbentane, Boulbon, Cabannes, Maillane, Graveson, Rognonas, Châteaurenard, Noves, Eyragues, Tarascon, Fontvielle, Mollégès, Salon de Provence, Nîmes, Pont de Crau, Mouriès, Maussane les Alpilles</p>
+        <p>IDM Installation Dépannage Maintenance pour Climatisation, Pompe à Chaleur, Ballon Thermodynamique, Traitement de l'Eau</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+    <div class="logo" onclick="scrollToSection('hero')">
+        <img src="logo idm-entreprise.png" alt="Logo IDM Entreprise" class="logo-navbar">
+    </div>
+    <ul class="nav-links">
+        <li><a href="#about" onclick="scrollToSection('about')">À propos</a></li>
+        <li><a href="#services" onclick="scrollToSection('services')">Services</a></li>
+        <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+    </ul>
+    <div class="burger" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-logo" onclick="scrollToSection('hero'); closeSidebar();">
+        <img src="logo idm-entreprise.png" alt="Logo IDM Entreprise" class="logo-navbar">
+        </div>
+    </div>
+    <div class="sidebar-links">
+        <a href="#about" onclick="scrollToSection('about'); closeSidebar();">À propos</a>
+        <a href="#services" onclick="scrollToSection('services'); closeSidebar();">Services</a>
+        <a href="#contact" onclick="scrollToSection('contact'); closeSidebar();">Contact</a>
+    </div>
+</div>
+
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+
+    <!-- Logo banner Section-->
+    <section class="logo-banner">
+        <img src="logo idm-entreprise.png" alt="Logo IDM Entreprise" class="logo-banner-img">
+    </section>
+
+    <!-- Hero Section -->
+   <section class="hero" id="hero">
+    <div class="hero-content">
+        <h1>IDM Entreprise</h1>
+        <p><strong>Installation Dépannage Maintenance</strong><br>Spécialiste en climatisation, pompe à chaleur et traitement de l'eau dans le pays d'Arles</p>
+        <a href="#contact" class="cta-button" onclick="scrollToSection('contact')">Demander un devis</a>
+    </div>
+</section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>À propos d'IDM Entreprise</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>IDM entreprise est une société spécialisée dans le dépannage et l'entretien des installations techniques, notamment dans les domaines suivants :</p>
+                <ul>
+                    <li>Systèmes de climatisation</li>
+                    <li>Pompes à chaleur</li>
+                    <li>Production d'eau chaude</li>
+                    <li>Traitement de l'eau</li>
+                </ul>
+                <p>Cette entreprise est, qui plus est, un partenaire fiable pour vos projets d'installations ou de rénovation énergétique.</p>
+                
+                <h3>Valeurs et engagements :</h3>
+                <p>IDM entreprise met l'accent sur l'approche humaine et la satisfaction du client. Guillaume Despaquis, votre interlocuteur, met son expérience au service de la clientèle tout en privilégiant le contact, la qualité et le suivi.</p>
+                
+                <p>Il favorise également :</p>
+                <ul>
+                    <li>une écoute attentive</li>
+                    <li>la réactivité</li>
+                    <li>l'efficacité</li>
+                    <li>le suivi SAV</li>
+                    <li>un prix abordable</li>
+                </ul>
+                
+                <p>Cette entreprise se distingue par sa taille humaine, ce qui lui permet de conserver aisément la relation de proximité, la flexibilité et une adaptation rapide couplée à une approche personnalisée.</p>
+                
+                <p><strong>Intervention dans le pays d'Arles et alentour, pour vos installations de climatisation, pompe à chaleur, ballon thermodynamique, et traitement de l'eau.</strong></p>
+            </div>
+            <div class="about-image">
+                <div class="placeholder-img">
+                    Image à insérer<br>
+                    (Photo d'équipement ou technicien)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <h2>Nos Services</h2>
+            <div class="services-grid">
+    <div class="service-card">
+        <div class="service-card-content">
+            <img src="Climatisation.png" alt="Climatisation" class="service-img">
+            <div class="service-info">
+                <div class="service-icon">❄️</div>
+                <h3>Climatisation</h3>
+                <p>Installation, dépannage et maintenance de systèmes de climatisation pour particuliers et professionnels.</p>
+            </div>
+        </div>
+    </div>
+    <div class="service-card">
+        <div class="service-card-content">
+            <img src="Pompe à chaleur.jpeg" alt="Pompe à chaleur" class="service-img">
+            <div class="service-info">
+                <div class="service-icon">🔥</div>
+                <h3>Pompe à chaleur</h3>
+                <p>Installation, entretien et dépannage de pompes à chaleur air/air et air/eau pour un confort optimal toute l'année.</p>
+            </div>
+        </div>
+    </div>
+    <div class="service-card">
+        <div class="service-card-content">
+            <img src="filtration et accessoires.png" alt="Traitement de l'eau" class="service-img">
+            <div class="service-info">
+                <div class="service-icon">💧</div>
+                <h3>Traitement de l'eau</h3>
+                <p>Solutions de filtration, adoucisseurs et accessoires pour améliorer la qualité de votre eau domestique.</p>
+            </div>
+        </div>
+    </div>
+    <div class="service-card">
+        <div class="service-card-content">
+            <img src="Ballon thermodynamique.jpg" alt="Ballon thermodynamique" class="service-img">
+            <div class="service-info">
+                <div class="service-icon">🌡️</div>
+                <h3>Ballon thermodynamique</h3>
+                <p>Installation et maintenance de ballons thermodynamiques pour une production d'eau chaude économique et écologique.</p>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contactez-nous</h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nom">Nom *</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="prenom">Prénom *</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="telephone">Téléphone *</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="ville">Ville d'intervention</label>
+                <select id="ville" name="ville">
+                    <option value="">Sélectionnez votre ville</option>
+                    <option value="arles">Arles</option>
+                    <option value="raphele">Raphèle les Arles</option>
+                    <option value="saint-remy">Saint-Rémy-de-Provence</option>
+                    <option value="barbentane">Barbentane</option>
+                    <option value="boulbon">Boulbon</option>
+                    <option value="cabannes">Cabannes</option>
+                    <option value="maillane">Maillane</option>
+                    <option value="graveson">Graveson</option>
+                    <option value="rognonas">Rognonas</option>
+                    <option value="chateaurenard">Châteaurenard</option>
+                    <option value="noves">Noves</option>
+                    <option value="eyragues">Eyragues</option>
+                    <option value="tarascon">Tarascon</option>
+                    <option value="fontvielle">Fontvielle</option>
+                    <option value="molleges">Mollégès</option>
+                    <option value="salon">Salon de Provence</option>
+                    <option value="nimes">Nîmes</option>
+                    <option value="pont-de-crau">Pont de Crau</option>
+                    <option value="mouries">Mouriès</option>
+                    <option value="maussane">Maussane les Alpilles</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="service">Type de service</label>
+                <select id="service" name="service">
+                    <option value="">Choisissez le service</option>
+                    <option value="depannage-urgent">🚨 Dépannage climatisation (urgent)</option>
+                    <option value="installation-clim">❄️ Installation climatisation</option>
+                    <option value="installation-pac">🔥 Installation pompe à chaleur</option>
+                    <option value="ballon-thermo">🚿 Ballon thermodynamique</option>
+                    <option value="traitement-eau">💧 Traitement de l'eau</option>
+                    <option value="entretien">🔧 Entretien/Maintenance</option>
+                    <option value="devis">💰 Demande de devis</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="submit-btn">Envoyer ma demande</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>IDM-entreprise</h3>
+                <p>Installation Dépannage Maintenance Entretien</p>
+                <a href="#" style="color: #32b4cf;">📘 Facebook</a>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <a href="tel:0675383756">📞 06 75 38 37 56</a>
+                <a href="mailto:gd@idm-entreprise.fr">✉️ gd@idm-entreprise.fr</a>
+                <p>📍 13280 Raphèle les Arles</p>
+            </div>
+            <div class="footer-column">
+                <h3>Informations</h3>
+                <p>IDM entreprise</p>
+                <p>EURL au capital de 5000 €</p>
+                <p>Siret N° 931 859 052 00017</p>
+                <p>APE : 4322B</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 IDM Entreprise. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const navbarHeight = 80;
+            const elementPosition = section.offsetTop;
+            const offsetPosition = elementPosition - navbarHeight;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navbarHeight = 80;
+                    const elementPosition = target.offsetTop;
+                    const offsetPosition = elementPosition - navbarHeight;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre demande ! Nous vous recontacterons rapidement.');
+        });
+
+        // Add scroll animation
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const scrollTop = window.pageYOffset;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
