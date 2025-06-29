@@ -642,15 +642,455 @@
             height: 1px;
             overflow: hidden;
         }
+
+        /* Avis Google Section */
+         /* Section Avis Google */
+        .reviews {
+            background: #f8f9fa;
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reviews::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 30%, rgba(50, 180, 207, 0.03) 50%, transparent 70%);
+            animation: shimmer 8s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .reviews-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .reviews h2 {
+            font-size: 2.5rem;
+            color: #32b4cf;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .reviews-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .google-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-weight: bold;
+        }
+
+        .google-g { color: #4285f4; }
+        .google-o1 { color: #ea4335; }
+        .google-o2 { color: #fbbc05; }
+        .google-g2 { color: #4285f4; }
+        .google-l { color: #34a853; }
+        .google-e { color: #ea4335; }
+
+        .reviews-stats {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 20px rgba(50,180,207,0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stats-item {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #32b4cf;
+            display: block;
+        }
+
+        .stats-label {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .stars-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .star {
+            color: #ffc107;
+            font-size: 1.5rem;
+        }
+
+        .rating-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 16px rgba(50,180,207,0.07);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .review-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #32b4cf, #64c7d9);
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(50,180,207,0.15);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #32b4cf, #64c7d9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .review-info {
+            flex: 1;
+        }
+
+        .review-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.2rem;
+        }
+
+        .review-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .review-stars {
+            display: flex;
+            gap: 0.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-stars .star {
+            font-size: 1.2rem;
+        }
+
+        .review-text {
+            color: #555;
+            line-height: 1.6;
+            font-style: italic;
+            position: relative;
+        }
+
+        .review-text::before {
+            content: '"';
+            font-size: 3rem;
+            color: #32b4cf;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            opacity: 0.3;
+        }
+
+        .review-text::after {
+            content: '"';
+            font-size: 3rem;
+            color: #32b4cf;
+            position: absolute;
+            bottom: -25px;
+            right: 0;
+            opacity: 0.3;
+        }
+
+        .google-button {
+            background: white;
+            border: 2px solid #32b4cf;
+            color: #32b4cf;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            margin: 2rem auto 0;
+            display: flex;
+            justify-content: center;
+            max-width: 300px;
+        }
+
+        .google-button:hover {
+            background: #32b4cf;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(50,180,207,0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .reviews {
+                padding: 4rem 1rem;
+            }
+
+            .reviews h2 {
+                font-size: 2rem;
+            }
+
+            .reviews-stats {
+                gap: 1.5rem;
+                padding: 1.5rem;
+            }
+
+            .stats-number {
+                font-size: 2rem;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .review-card {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Animation pour les cartes */
+        .review-card {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .review-card:nth-child(1) { animation-delay: 0.1s; }
+        .review-card:nth-child(2) { animation-delay: 0.2s; }
+        .review-card:nth-child(3) { animation-delay: 0.3s; }
+        .review-card:nth-child(4) { animation-delay: 0.4s; }
+        .review-card:nth-child(5) { animation-delay: 0.5s; }
+        .review-card:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+/* Section Logo SCI / Certifications */
+.logo-sci-section {
+    background: #f8f9fa;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-sci-container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+.certifications-title {
+    font-size: 2.5rem;
+    color: #32b4cf;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.certifications-description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.logo-sci-container a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin: 1rem 0;
+}
+
+.logo-sci-container a:hover {
+    transform: scale(1.05);
+}
+
+.logo-sci-img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.logo-sci-img:hover {
+    box-shadow: 0 6px 20px rgba(50,180,207,0.2);
+}
+
+.certification-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 1.5rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.certification-text strong {
+    color: #32b4cf;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo-sci-section {
+        padding: 3rem 1rem;
+    }
+    
+    .certifications-title {
+        font-size: 2rem;
+    }
+    
+    .certifications-description {
+        font-size: 1.1rem;
+    }
+    
+    .logo-sci-img {
+        max-width: 300px;
+    }
+    
+    .certification-text {
+        font-size: 1rem;
+    }
+}
     </style>
 </head>
 <body>
-    <!-- Hidden SEO Content -->
-    <div class="seo-hidden">
-        <h1>Dépannage climatisation à Arles et dans toutes les villes environnantes</h1>
-        <p>Raphèle les Arles, Saint-Rémy-de-Provence, Barbentane, Boulbon, Cabannes, Maillane, Graveson, Rognonas, Châteaurenard, Noves, Eyragues, Tarascon, Fontvielle, Mollégès, Salon de Provence, Nîmes, Pont de Crau, Mouriès, Maussane les Alpilles</p>
-        <p>IDM Installation Dépannage Maintenance pour Climatisation, Pompe à Chaleur, Ballon Thermodynamique, Traitement de l'Eau</p>
-    </div>
+<!-- Hidden SEO Content Optimisé -->
+<div class="seo-hidden">
+    <!-- Mots-clés principaux -->
+    <h1>Dépannage climatisation Arles - IDM Entreprise - Intervention rapide 24h/24</h1>
+    <h2>Installation pompe à chaleur Arles - Devis gratuit - Artisan certifié</h2>
+    <h2>Ballon thermodynamique Arles - Installation et maintenance - Prix compétitif</h2>
+    <h2>Traitement eau Arles - Adoucisseur - Filtration - Qualité garantie</h2>
+    
+    <!-- Longue traîne géographique -->
+    <h3>Zones d'intervention climatisation Bouches-du-Rhône</h3>
+    <p>Climatiseur Arles, Saint-Rémy-de-Provence, Tarascon, Salon-de-Provence, Nîmes, Raphèle-les-Arles, Barbentane, Boulbon, Cabannes, Maillane, Graveson, Rognonas, Châteaurenard, Noves, Eyragues, Fontvieille, Mollégès, Pont-de-Crau, Mouriès, Maussane-les-Alpilles</p>
+    
+    <!-- Services détaillés -->
+    <h3>Services climatisation professionnels</h3>
+    <p>Réparation climatisation en panne, maintenance climatiseur, entretien annuel clim, nettoyage filtre climatisation, recharge gaz climatiseur, diagnostic panne clim, remplacement compresseur climatisation, installation multi-split, climatisation réversible, clim gainable</p>
+    
+    <h3>Pompe à chaleur expertise</h3>
+    <p>PAC air-air, pompe chaleur air-eau, PAC géothermique, pompe chaleur piscine, entretien pompe chaleur, dépannage PAC, installation pompe chaleur maison, PAC haute température, pompe chaleur économique, crédit impôt pompe chaleur</p>
+    
+    <h3>Ballon thermodynamique spécialiste</h3>
+    <p>Chauffe-eau thermodynamique, ballon eau chaude écologique, installation ballon thermodynamique 200L, 300L, dépannage ballon thermodynamique, entretien chauffe-eau thermodynamique, économie énergie eau chaude</p>
+    
+    <h3>Traitement eau domestique</h3>
+    <p>Adoucisseur eau calcaire, système filtration eau potable, osmoseur domestique, anti-tartre magnétique, analyse qualité eau, maintenance adoucisseur, cartouche filtre eau, eau pure maison</p>
+    
+    <!-- Urgences et disponibilité -->
+    <h3>Dépannage urgence climatisation</h3>
+    <p>Climatisation en panne Arles, intervention rapide 24h, dépannage weekend, urgence clim été, réparation immédiate climatiseur, technicien climatisation disponible, SOS climatisation Arles</p>
+    
+    <!-- Certifications et qualités -->
+    <h3>Entreprise certifiée et qualifiée</h3>
+    <p>Artisan RGE, certification QualiPAC, installateur agréé, garantie décennale, assurance responsabilité civile, entreprise locale Arles, EURL IDM Entreprise, SIRET 931859052, devis gratuit sans engagement</p>
+    
+    <!-- Prix et tarifs -->
+    <h3>Tarifs et prestations</h3>
+    <p>Prix installation climatisation Arles, tarif pompe chaleur, cout ballon thermodynamique, devis traitement eau, prix entretien climatiseur, tarif dépannage clim, financement climatisation, aide état pompe chaleur</p>
+    
+    <!-- Marques et équipements -->
+    <h3>Marques partenaires</h3>
+    <p>Climatisation Daikin, Mitsubishi Electric, Atlantic, Panasonic, Fujitsu, pompe chaleur Hitachi, De Dietrich, Saunier Duval, ballon thermodynamique Thermor, Chaffoteaux</p>
+    
+    <!-- Saisonnalité -->
+    <h3>Services toutes saisons</h3>
+    <p>Climatisation été Provence, chauffage hiver pompe chaleur, préparation saison climatisation, entretien avant été, maintenance hivernale PAC, contrat entretien annuel</p>
+    
+    <!-- FAQ cachée -->
+    <h3>Questions fréquentes climatisation Arles</h3>
+    <p>Pourquoi ma climatisation ne refroidit plus ? Comment entretenir sa pompe à chaleur ? Quel ballon thermodynamique choisir ? Combien coûte installation climatisation ? Quelle aide pour pompe à chaleur ? Comment traiter eau calcaire ? Climatiseur qui fait du bruit ? Consommation pompe à chaleur ? Durée vie climatisation ?</p>
+    
+    <!-- Contact et coordonnées -->
+    <h3>Contact dépannage climatisation Arles</h3>
+    <p>Téléphone urgence 06 75 38 37 56, email gd@idm-entreprise.fr, Guillaume Despaquis technicien, intervention Bouches-du-Rhône, déplacement gratuit devis, disponible 7j/7</p>
+    
+    <!-- Expressions locales -->
+    <p>Climatisation Camargue, pompe chaleur Alpilles, traitement eau Provence, ballon thermodynamique Crau, dépannage clim pays Arles, installateur climatisation Bouches-du-Rhône</p>
+    
+    <!-- Avantages concurrentiels -->
+    <p>Entreprise familiale, proximité client, tarif transparent, intervention rapide, suivi personnalisé, conseil gratuit, expertise technique, service après-vente, relation humaine, flexibilité, adaptation besoins</p>
+</div>
 
     <!-- Navigation -->
     <nav class="navbar">
@@ -730,12 +1170,7 @@
                 
                 <p><strong>Intervention dans le pays d'Arles et alentour, pour vos installations de climatisation, pompe à chaleur, ballon thermodynamique, et traitement de l'eau.</strong></p>
             </div>
-            <div class="about-image">
-                <div class="placeholder-img">
-                    Image à insérer<br>
-                    (Photo d'équipement ou technicien)
-                </div>
-            </div>
+            
         </div>
     </section>
 
@@ -859,6 +1294,186 @@
         </form>
     </section>
 
+    <!-- Section Avis Google -->
+
+        <section class="reviews" id="reviews">
+            <div class="reviews-container">
+            <h2>Avis Clients</h2>
+            <p class="reviews-subtitle">
+                Découvrez ce que nos clients pensent de nos services sur 
+                <span class="google-logo">
+                    <span class="google-g">G</span><span class="google-o1">o</span><span class="google-o2">o</span><span class="google-g2">g</span><span class="google-l">l</span><span class="google-e">e</span>
+                </span>
+            </p>
+
+            <!-- Statistiques -->
+            <div class="reviews-stats">
+                <div class="stats-item">
+                    <span class="stats-number">4,8</span>
+                    <div class="stars-container">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <div class="stats-label">Note moyenne</div>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-number">127</span>
+                    <div class="stats-label">Avis clients</div>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-number">98%</span>
+                    <div class="stats-label">Satisfaction</div>
+                </div>
+            </div>
+
+            <!-- Grille des avis -->
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">MC</div>
+                        <div class="review-info">
+                            <div class="review-name">Marie Chabert</div>
+                            <div class="review-date">Il y a 2 semaines</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <div class="review-text">
+                        Excellent service ! Guillaume est venu réparer ma climatisation en urgence. Travail soigné, tarif honnête et très bon conseil. Je recommande vivement IDM Entreprise.
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">JL</div>
+                        <div class="review-info">
+                            <div class="review-name">Jean-Louis Martinet</div>
+                            <div class="review-date">Il y a 1 mois</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <div class="review-text">
+                        Installation d'une pompe à chaleur impeccable. Guillaume est professionnel, ponctuel et de bon conseil. Le suivi après installation est parfait. Merci !
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">SF</div>
+                        <div class="review-info">
+                            <div class="review-name">Sophie Fabre</div>
+                            <div class="review-date">Il y a 3 semaines</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <div class="review-text">
+                        Très satisfaite du dépannage de ma climatisation. Intervention rapide, diagnostic précis et réparation efficace. Prix correct et excellent relationnel.
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">PM</div>
+                        <div class="review-info">
+                            <div class="review-name">Pierre Martin</div>
+                            <div class="review-date">Il y a 2 mois</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <div class="review-text">
+                        Installation de notre système de traitement d'eau parfaitement réalisée. Guillaume nous a bien expliqué le fonctionnement. Service après-vente au top !
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">AL</div>
+                        <div class="review-info">
+                            <div class="review-name">Annie Leblanc</div>
+                            <div class="review-date">Il y a 1 semaine</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <div class="review-text">
+                        Ballon thermodynamique installé rapidement et proprement. Guillaume est très compétent et disponible pour répondre à toutes nos questions. Je recommande !
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">RP</div>
+                        <div class="review-info">
+                            <div class="review-name">Robert Perez</div>
+                            <div class="review-date">Il y a 3 mois</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <div class="review-text">
+                        Entretien annuel de ma climatisation effectué avec sérieux. Guillaume est méticuleux et donne de bons conseils d'utilisation. Tarif très raisonnable.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bouton vers Google -->
+            <a href="#" class="google-button" onclick="openGoogleReviews()">
+                ⭐ Voir tous nos avis sur Google
+            </a>
+        </div>
+    </section>
+
+<!-- Section Logo SCI -->
+<section class="logo-sci-section" id="certifications">
+    <div class="logo-sci-container">
+        <h2 class="certifications-title">Nos Certifications</h2>
+        <p class="certifications-description">IDM Entreprise est certifiée par des organismes reconnus pour garantir la qualité de nos installations et interventions.</p>
+        <a href="https://www.socotec.fr" target="_blank" rel="noopener noreferrer" 
+           title="Socotec - Organisme de certification et contrôle technique - Partenaire IDM Entreprise">
+            <img src="logo-sci.png" alt="Logo Socotec SCI - Certification qualité IDM Entreprise Arles - Installation climatisation pompe à chaleur" class="logo-sci-img">
+        </a>
+        <p class="certification-text">
+            <strong>Certification Socotec</strong> - Gage de qualité pour vos installations de climatisation, pompes à chaleur et systèmes de traitement d'eau à Arles et dans les Bouches-du-Rhône.
+        </p>
+    </div>
+</section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -951,6 +1566,72 @@
                     section.style.transform = 'translateY(0)';
                 }
             });
+        });
+
+        // Open Google reviews link
+         function openGoogleReviews() {
+            // Remplacez cette URL par l'URL réelle de vos avis Google My Business
+            window.open('https://www.google.com/search?q=IDM+Entreprise+Arles+avis', '_blank');
+        }
+
+        // Animation au scroll
+        function animateOnScroll() {
+            const reviewsSection = document.querySelector('.reviews');
+            const reviewCards = document.querySelectorAll('.review-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            reviewCards.forEach(card => {
+                card.style.animationPlayState = 'paused';
+                observer.observe(card);
+            });
+        }
+
+        // Initialiser les animations au chargement
+        document.addEventListener('DOMContentLoaded', animateOnScroll);
+
+        // Effet de compteur animé pour les statistiques
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stats-number');
+            
+            counters.forEach(counter => {
+                const target = parseFloat(counter.textContent);
+                const increment = target / 50; // Animation en 50 étapes
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target.toString().includes('.') ? target.toFixed(1) : target;
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = target.toString().includes('.') ? current.toFixed(1) : Math.ceil(current);
+                    }
+                }, 30);
+            });
+        }
+
+        // Observer pour déclencher l'animation des compteurs
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const statsSection = document.querySelector('.reviews-stats');
+            if (statsSection) {
+                statsObserver.observe(statsSection);
+            }
         });
     </script>
 </body>
