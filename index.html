@@ -107,6 +107,7 @@
             border-radius: 4px;
             transition: all 0.3s ease;
             position: relative;
+            font-weight: bold;
         }
 
         .nav-links a:hover {
@@ -220,7 +221,7 @@
 
         /* Hero Section */
         .hero {
-            height: 30vh;
+            height: 34vh;
             background: linear-gradient(135deg, rgba(50, 180, 207, 0.8), rgba(50, 180, 207, 0.6)), 
                         url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%2387CEEB" width="1200" height="800"/><circle fill="%23228B22" cx="200" cy="200" r="80"/><circle fill="%2332CD32" cx="400" cy="150" r="60"/><circle fill="%23228B22" cx="600" cy="300" r="100"/><circle fill="%2332CD32" cx="800" cy="200" r="70"/><circle fill="%23228B22" cx="1000" cy="350" r="90"/><rect fill="%23228B22" x="100" y="600" width="1000" height="200" rx="20"/></svg>');
             background-size: cover;
@@ -231,6 +232,7 @@
             text-align: center;
             color: white;
             position: relative;
+
         }
 
         .hero-content {
@@ -462,7 +464,7 @@
         .service-icon {
             width: 80px;
             height: 80px;
-            background: #32b4cf;
+            background: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -479,69 +481,168 @@
             font-size: 1.3rem;
         }
 
-        /* Contact Form */
-        .contact {
-            padding: 6rem 2rem;
-            max-width: 800px;
+.contact {
+            padding: 60px 20px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .contact h2 {
+            text-align: center;
+            margin-bottom: 50px;
             font-size: 2.5rem;
             color: #32b4cf;
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
             font-weight: bold;
-            color: #333;
         }
 
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: start;
         }
 
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #32b4cf;
+        .contact-info {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            height: fit-content;
+        }
+
+        .contact-info h3 {
+            color: #32b4cf;
+            margin-bottom: 30px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .contact-item span {
+            font-size: 1.5rem;
+        }
+
+        form {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #32b4cf;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
         }
 
         .submit-btn {
             background: #32b4cf;
             color: white;
-            padding: 1rem 3rem;
+            padding: 15px 30px;
             border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
+            border-radius: 5px;
+            font-size: 18px;
             font-weight: bold;
             cursor: pointer;
-            transition: all 0.3s ease;
             width: 100%;
+            transition: background-color 0.3s ease;
         }
 
         .submit-btn:hover {
-            background: #2a9bb5;
-            transform: translateY(-2px);
+            background: #2a9bb8;
+        }
+
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        #message {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            border: 2px solid #c3e6cb;
+        }
+
+        .error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 2px solid #f5c6cb;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact h2 {
+                font-size: 2rem;
+            }
+
+            .contact-info,
+            form {
+                padding: 20px;
+            }
         }
 
         /* Footer */
@@ -1101,6 +1202,7 @@
         <li><a href="#about" onclick="scrollToSection('about')">À propos</a></li>
         <li><a href="#services" onclick="scrollToSection('services')">Services</a></li>
         <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+        <li><a href="#avis" onclick="scrollToSection('avis')">Avis</a></li>
     </ul>
     <div class="burger" onclick="toggleSidebar()">
         <span></span>
@@ -1120,6 +1222,7 @@
         <a href="#about" onclick="scrollToSection('about'); closeSidebar();">À propos</a>
         <a href="#services" onclick="scrollToSection('services'); closeSidebar();">Services</a>
         <a href="#contact" onclick="scrollToSection('contact'); closeSidebar();">Contact</a>
+        <a href="#avis" onclick="scrollToSection('avis'); closeSidebar();">Avis</a>
     </div>
 </div>
 
@@ -1183,7 +1286,7 @@
         <div class="service-card-content">
             <img src="Climatisation.png" alt="Climatisation" class="service-img">
             <div class="service-info">
-                <div class="service-icon">❄️</div>
+                <img src="Logo climatisation.png" alt="Ballon thermodynamique" class="service-icon"> 
                 <h3>Climatisation</h3>
                 <p>Installation, dépannage et maintenance de systèmes de climatisation pour particuliers et professionnels.</p>
             </div>
@@ -1193,7 +1296,7 @@
         <div class="service-card-content">
             <img src="Pompe à chaleur.jpeg" alt="Pompe à chaleur" class="service-img">
             <div class="service-info">
-                <div class="service-icon">🔥</div>
+                <img src="Logo Pompe à chaleur.png" alt="Ballon thermodynamique" class="service-icon"> 
                 <h3>Pompe à chaleur</h3>
                 <p>Installation, entretien et dépannage de pompes à chaleur air/air et air/eau pour un confort optimal toute l'année.</p>
             </div>
@@ -1203,7 +1306,7 @@
         <div class="service-card-content">
             <img src="filtration et accessoires.png" alt="Traitement de l'eau" class="service-img">
             <div class="service-info">
-                <div class="service-icon">💧</div>
+                <img src="Logo Traitement de l'eau.png" alt="Ballon thermodynamique" class="service-icon"> 
                 <h3>Traitement de l'eau</h3>
                 <p>Solutions de filtration, adoucisseurs et accessoires pour améliorer la qualité de votre eau domestique.</p>
             </div>
@@ -1211,9 +1314,9 @@
     </div>
     <div class="service-card">
         <div class="service-card-content">
-            <img src="Ballon thermodynamique.jpg" alt="Ballon thermodynamique" class="service-img">
+            <img src="Ballon thermodynamique.png" alt="Ballon thermodynamique" class="service-img">
             <div class="service-info">
-                <div class="service-icon">🌡️</div>
+                <img src="Logo ballon thermodynamique.png" alt="Ballon thermodynamique" class="service-icon">                
                 <h3>Ballon thermodynamique</h3>
                 <p>Installation et maintenance de ballons thermodynamiques pour une production d'eau chaude économique et écologique.</p>
             </div>
@@ -1224,252 +1327,101 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+<section class="contact" id="contact">
         <h2>Contactez-nous</h2>
-        <form>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="nom">Nom *</label>
-                    <input type="text" id="nom" name="nom" required>
-                </div>
-                <div class="form-group">
-                    <label for="prenom">Prénom *</label>
-                    <input type="text" id="prenom" name="prenom" required>
-                </div>
-            </div>
-            
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="telephone">Téléphone *</label>
-                    <input type="tel" id="telephone" name="telephone" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Adresse email *</label>
-                    <input type="email" id="email" name="email" required>
+        
+        <div class="contact-container">
+            <!-- Informations de contact à gauche -->
+            <div class="contact-info">
+                <h3>N'hésitez pas à nous contacter si vous avez un problème ou une question.</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <span>06 75 38 37 56</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️</span>
+                        <span>gd@idm-entreprise.fr</span>
+                    </div>
                 </div>
             </div>
-            
-            <div class="form-group">
-                <label for="ville">Ville d'intervention</label>
-                <select id="ville" name="ville">
-                    <option value="">Sélectionnez votre ville</option>
-                    <option value="arles">Arles</option>
-                    <option value="raphele">Raphèle les Arles</option>
-                    <option value="saint-remy">Saint-Rémy-de-Provence</option>
-                    <option value="barbentane">Barbentane</option>
-                    <option value="boulbon">Boulbon</option>
-                    <option value="cabannes">Cabannes</option>
-                    <option value="maillane">Maillane</option>
-                    <option value="graveson">Graveson</option>
-                    <option value="rognonas">Rognonas</option>
-                    <option value="chateaurenard">Châteaurenard</option>
-                    <option value="noves">Noves</option>
-                    <option value="eyragues">Eyragues</option>
-                    <option value="tarascon">Tarascon</option>
-                    <option value="fontvielle">Fontvielle</option>
-                    <option value="molleges">Mollégès</option>
-                    <option value="salon">Salon de Provence</option>
-                    <option value="nimes">Nîmes</option>
-                    <option value="pont-de-crau">Pont de Crau</option>
-                    <option value="mouries">Mouriès</option>
-                    <option value="maussane">Maussane les Alpilles</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="service">Type de service</label>
-                <select id="service" name="service">
-                    <option value="">Choisissez le service</option>
-                    <option value="depannage-urgent">🚨 Dépannage climatisation (urgent)</option>
-                    <option value="installation-clim">❄️ Installation climatisation</option>
-                    <option value="installation-pac">🔥 Installation pompe à chaleur</option>
-                    <option value="ballon-thermo">🚿 Ballon thermodynamique</option>
-                    <option value="traitement-eau">💧 Traitement de l'eau</option>
-                    <option value="entretien">🔧 Entretien/Maintenance</option>
-                    <option value="devis">💰 Demande de devis</option>
-                </select>
-            </div>
-            
-            <button type="submit" class="submit-btn">Envoyer ma demande</button>
-        </form>
+
+            <!-- Formulaire à droite -->
+            <form action="https://formspree.io/f/xwpbyedk" method="POST" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nom">Nom *</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom">Prénom *</label>
+                        <input type="text" id="prenom" name="prenom" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telephone">Téléphone *</label>
+                        <input type="tel" id="telephone" name="telephone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ville">Ville d'intervention</label>
+                    <input type="text" id="ville" name="ville" placeholder="Saisissez votre ville">
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Type de service</label>
+                    <select id="service" name="service">
+                        <option value="">Choisissez le service</option>
+                        <option value="depannage-urgent">🚨 Dépannage climatisation (urgent)</option>
+                        <option value="installation-clim">❄️ Installation climatisation</option>
+                        <option value="installation-pac">🔥 Installation pompe à chaleur</option>
+                        <option value="ballon-thermo">🚿 Ballon thermodynamique</option>
+                        <option value="traitement-eau">💧 Traitement de l'eau</option>
+                        <option value="entretien">🔧 Entretien/Maintenance</option>
+                        <option value="devis">💰 Demande de devis</option>
+                        <option value="autre">❓ Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description du problème/besoin *</label>
+                    <textarea id="description" name="description" placeholder="Décrivez votre problème ou votre besoin en détail..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submitBtn">Envoyer ma demande</button>
+            </form>
+        </div>
+
+        <div id="message" style="display: none;"></div>
     </section>
 
     <!-- Section Avis Google -->
 
-        <section class="reviews" id="reviews">
-            <div class="reviews-container">
-            <h2>Avis Clients</h2>
-            <p class="reviews-subtitle">
-                Découvrez ce que nos clients pensent de nos services sur 
-                <span class="google-logo">
-                    <span class="google-g">G</span><span class="google-o1">o</span><span class="google-o2">o</span><span class="google-g2">g</span><span class="google-l">l</span><span class="google-e">e</span>
-                </span>
-            </p>
+<!-- Elfsight Google Reviews | Untitled Google Reviews -->
+<section class="avis-google" id="avis">
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-ad05f9ac-d469-448c-ac1e-26d7237f6972" data-elfsight-app-lazy></div>
+</section>
 
-            <!-- Statistiques -->
-            <div class="reviews-stats">
-                <div class="stats-item">
-                    <span class="stats-number">4,8</span>
-                    <div class="stars-container">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <div class="stats-label">Note moyenne</div>
-                </div>
-                <div class="stats-item">
-                    <span class="stats-number">127</span>
-                    <div class="stats-label">Avis clients</div>
-                </div>
-                <div class="stats-item">
-                    <span class="stats-number">98%</span>
-                    <div class="stats-label">Satisfaction</div>
-                </div>
-            </div>
-
-            <!-- Grille des avis -->
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">MC</div>
-                        <div class="review-info">
-                            <div class="review-name">Marie Chabert</div>
-                            <div class="review-date">Il y a 2 semaines</div>
-                        </div>
-                    </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <div class="review-text">
-                        Excellent service ! Guillaume est venu réparer ma climatisation en urgence. Travail soigné, tarif honnête et très bon conseil. Je recommande vivement IDM Entreprise.
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">JL</div>
-                        <div class="review-info">
-                            <div class="review-name">Jean-Louis Martinet</div>
-                            <div class="review-date">Il y a 1 mois</div>
-                        </div>
-                    </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <div class="review-text">
-                        Installation d'une pompe à chaleur impeccable. Guillaume est professionnel, ponctuel et de bon conseil. Le suivi après installation est parfait. Merci !
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">SF</div>
-                        <div class="review-info">
-                            <div class="review-name">Sophie Fabre</div>
-                            <div class="review-date">Il y a 3 semaines</div>
-                        </div>
-                    </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <div class="review-text">
-                        Très satisfaite du dépannage de ma climatisation. Intervention rapide, diagnostic précis et réparation efficace. Prix correct et excellent relationnel.
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">PM</div>
-                        <div class="review-info">
-                            <div class="review-name">Pierre Martin</div>
-                            <div class="review-date">Il y a 2 mois</div>
-                        </div>
-                    </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <div class="review-text">
-                        Installation de notre système de traitement d'eau parfaitement réalisée. Guillaume nous a bien expliqué le fonctionnement. Service après-vente au top !
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">AL</div>
-                        <div class="review-info">
-                            <div class="review-name">Annie Leblanc</div>
-                            <div class="review-date">Il y a 1 semaine</div>
-                        </div>
-                    </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <div class="review-text">
-                        Ballon thermodynamique installé rapidement et proprement. Guillaume est très compétent et disponible pour répondre à toutes nos questions. Je recommande !
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">RP</div>
-                        <div class="review-info">
-                            <div class="review-name">Robert Perez</div>
-                            <div class="review-date">Il y a 3 mois</div>
-                        </div>
-                    </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <div class="review-text">
-                        Entretien annuel de ma climatisation effectué avec sérieux. Guillaume est méticuleux et donne de bons conseils d'utilisation. Tarif très raisonnable.
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bouton vers Google -->
-            <a href="#" class="google-button" onclick="openGoogleReviews()">
-                ⭐ Voir tous nos avis sur Google
-            </a>
-        </div>
-    </section>
 
 <!-- Section Logo SCI -->
 <section class="logo-sci-section" id="certifications">
     <div class="logo-sci-container">
-        <h2 class="certifications-title">Nos Certifications</h2>
-        <p class="certifications-description">IDM Entreprise est certifiée par des organismes reconnus pour garantir la qualité de nos installations et interventions.</p>
+        <h2 class="certifications-title">Certification</h2>
+        <p class="certifications-description"></p>
         <a href="https://www.socotec.fr" target="_blank" rel="noopener noreferrer" 
            title="Socotec - Organisme de certification et contrôle technique - Partenaire IDM Entreprise">
             <img src="logo-sci.png" alt="Logo Socotec SCI - Certification qualité IDM Entreprise Arles - Installation climatisation pompe à chaleur" class="logo-sci-img">
         </a>
         <p class="certification-text">
-            <strong>Certification Socotec</strong> - Gage de qualité pour vos installations de climatisation, pompes à chaleur et systèmes de traitement d'eau à Arles et dans les Bouches-du-Rhône.
+            <strong>Certification Socotec</strong> - Entreprise détentrice de l'attestation de capacité catégorie I : réglementation F-gaz.
         </p>
     </div>
 </section>
@@ -1480,7 +1432,7 @@
             <div class="footer-column">
                 <h3>IDM-entreprise</h3>
                 <p>Installation Dépannage Maintenance Entretien</p>
-                <a href="#" style="color: #32b4cf;">📘 Facebook</a>
+                <a href="https://www.facebook.com/people/IDM-entreprise/61566263677017/" target="_blank" style="color: #32b4cf;">📘 Facebook</a>
             </div>
             <div class="footer-column">
                 <h3>Contact</h3>
@@ -1546,27 +1498,86 @@
             });
         });
 
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
+ document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Merci pour votre demande ! Nous vous recontacterons rapidement.');
-        });
-
-        // Add scroll animation
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section');
-            const scrollTop = window.pageYOffset;
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                const sectionHeight = section.clientHeight;
-                
-                if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
-                    section.style.opacity = '1';
-                    section.style.transform = 'translateY(0)';
+            
+            const form = e.target;
+            const submitBtn = document.getElementById('submitBtn');
+            const messageDiv = document.getElementById('message');
+            
+            // Désactiver le bouton pendant l'envoi
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Envoi en cours...';
+            
+            // Envoyer les données à Formspree
+            const formData = new FormData(form);
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
                 }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Succès
+                    messageDiv.style.display = 'block';
+                    messageDiv.className = 'success-message';
+                    messageDiv.innerHTML = '✅ Votre message a été envoyé avec succès !<br>Nous vous répondrons dans les plus brefs délais.';
+                    
+                    // Réinitialiser le formulaire
+                    form.reset();
+                    
+                    // Faire défiler vers le message
+                    messageDiv.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Masquer le message après 8 secondes
+                    setTimeout(function() {
+                        messageDiv.style.display = 'none';
+                    }, 8000);
+                } else {
+                    throw new Error('Erreur réseau');
+                }
+            })
+            .catch(error => {
+                // Erreur
+                messageDiv.style.display = 'block';
+                messageDiv.className = 'error-message';
+                messageDiv.innerHTML = '❌ Une erreur est survenue lors de l\'envoi.<br>Veuillez réessayer ou nous contacter directement.';
+                
+                // Faire défiler vers le message
+                messageDiv.scrollIntoView({ behavior: 'smooth' });
+                
+                // Masquer le message après 8 secondes
+                setTimeout(function() {
+                    messageDiv.style.display = 'none';
+                }, 8000);
+            })
+            .finally(() => {
+                // Réactiver le bouton
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Envoyer ma demande';
             });
         });
+
+        function showMessage(text, type) {
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = text;
+            messageDiv.className = `message ${type}`;
+            messageDiv.style.display = 'block';
+            
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 5000);
+        }
+
+        function resetForm() {
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.classList.remove('loading');
+            submitBtn.textContent = 'Envoyer ma demande';
+            document.getElementById('contactForm').reset();
+        }
 
         // Open Google reviews link
          function openGoogleReviews() {
