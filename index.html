@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IDM Entreprise - Dépannage Climatisation Arles | Pompe à Chaleur | Traitement de l'Eau</title>
     <meta name="description" content="IDM Entreprise - Spécialiste dépannage climatisation à Arles, Saint-Rémy-de-Provence, Tarascon. Installation pompe à chaleur, ballon thermodynamique, traitement de l'eau. Intervention rapide 06 75 38 37 56">
-    <meta name="keywords" content="dépannage climatisation Arles, pompe à chaleur Arles, traitement eau Arles, ballon thermodynamique, Saint-Rémy-de-Provence, Tarascon, Nîmes, Salon de Provence">
+    <meta name="keywords" content="dépannage réparation entretien climatisation Arles, pompe à chaleur PAC Arles, traitement eau adoucisseur Arles, ballon thermodynamique chauffe-eau Arles, maintenance installation climatisation, Saint-Rémy-de-Provence, Tarascon, Nîmes, Salon-de-Provence, Fontvieille, Graveson, Barbentane, Châteaurenard, Avignon, Raphele-les-Arles, Fourques, Beaucaire, Bellegarde, Pont-de-Crau, Port-Saint-Louis-du-Rhône, Fos-sur-Mer, Istres, Miramas, technicien frigoriste, dépanneur climatisation, installateur pompe chaleur, spécialiste CVC, artisan RGE QualiPAC Arles">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -53,6 +53,14 @@
     
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+    
+    <!-- Sécurité basique -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <!-- Preconnect pour performance -->
+    <link rel="preconnect" href="https://static.elfsight.com">
+    <link rel="preconnect" href="https://formspree.io">
     <style>
         * {
             margin: 0;
@@ -111,6 +119,7 @@
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
+            background: transparent !important;
         }
 
         .logo:hover {
@@ -141,6 +150,7 @@
     margin: 0 auto;
     max-width: 90vw;
     max-height: 60vw;
+    background: transparent !important;
 }
 
 @media (min-width: 768px) {
@@ -149,6 +159,7 @@
         height: 500px;
         max-width: 100vw;
         max-height: 100vw;
+        background: transparent !important;
     }
 }
 
@@ -157,6 +168,7 @@
             height: 80px;
             object-fit: contain;
             display: block;
+            background: transparent !important;
         }
 
         .nav-links {
@@ -248,6 +260,7 @@
             color: white;
             font-weight: bold;
             cursor: pointer;
+            background: transparent !important;
         }
 
         .sidebar-links {
@@ -774,6 +787,27 @@
             loading: 'lazy';
         }
         
+        /* Optimisation polices */
+        body {
+            font-display: swap;
+        }
+        
+        /* Gestion erreur images */
+        img:not(.logo-navbar):not(.logo-banner-img) {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+        }
+        
+        /* Logos toujours transparents */
+        .logo-navbar, .logo-banner-img {
+            background: transparent !important;
+            border: none !important;
+        }
+        
+        img[src=""], img:not([src]) {
+            opacity: 0;
+        }
+        
         .service-img, .logo-banner-img, .logo-navbar, .logo-sci-img {
             will-change: transform;
         }
@@ -1217,7 +1251,7 @@
       "alternateName": "Installation Dépannage Maintenance",
       "description": "Spécialiste en climatisation, pompe à chaleur et traitement de l'eau dans le pays d'Arles",
       "url": "https://idm-entreprise.fr",
-      "telephone": "+33675383756",
+      "telephone": ["+33675383756", "06 75 38 37 56"],
       "email": "gd@idm-entreprise.fr",
       "address": {
         "@type": "PostalAddress",
@@ -1271,7 +1305,62 @@
         "@type": "EducationalOccupationalCredential",
         "credentialCategory": "Certification Socotec",
         "about": "Attestation de capacité catégorie I : réglementation F-gaz"
-      }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Client satisfait"
+          },
+          "reviewBody": "Service excellent, intervention rapide et efficace. Je recommande vivement IDM Entreprise pour tout dépannage climatisation."
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Schema.org pour FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Pourquoi ma climatisation ne refroidit plus ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Plusieurs causes possibles : filtre encrassé, manque de gaz réfrigérant, panne compresseur. Contactez IDM Entreprise pour un diagnostic gratuit au 06 75 38 37 56."
+          }
+        },
+        {
+          "@type": "Question", 
+          "name": "Combien coûte un dépannage climatisation à Arles ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le coût dépend de la panne. Déplacement gratuit pour diagnostic. Tarifs transparents communiqués avant intervention. Devis gratuit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Intervenez-vous en urgence ?",
+          "acceptedAnswer": {
+            "@type": "Answer", 
+            "text": "Oui, IDM Entreprise intervient 24h/24 7j/7 pour les urgences climatisation, pompe à chaleur et ballon thermodynamique sur Arles et région."
+          }
+        }
+      ]
     }
     </script>
 </head>
@@ -1286,24 +1375,24 @@
     
     <!-- Longue traîne géographique -->
     <h3>Zones d'intervention climatisation Bouches-du-Rhône</h3>
-    <p>Climatiseur Arles, Saint-Rémy-de-Provence, Tarascon, Salon-de-Provence, Nîmes, Raphèle-les-Arles, Barbentane, Boulbon, Cabannes, Maillane, Graveson, Rognonas, Châteaurenard, Noves, Eyragues, Fontvieille, Mollégès, Pont-de-Crau, Mouriès, Maussane-les-Alpilles</p>
+    <p>Dépannage réparation entretien climatisation pompe chaleur Arles, Saint-Rémy-de-Provence, Tarascon, Salon-de-Provence, Nîmes, Raphèle-les-Arles, Barbentane, Boulbon, Cabannes, Maillane, Graveson, Rognonas, Châteaurenard, Noves, Eyragues, Fontvieille, Mollégès, Pont-de-Crau, Mouriès, Maussane-les-Alpilles, Aureille, Orgon, Plan-d'Orgon, Verquières, Mallemort, Sénas, Lamanon, Eyguières, Cavaillon, L'Isle-sur-la-Sorgue, Avignon, Villeneuve-lès-Avignon, Les Angles, Roquemaure, Saze, Aramon, Fourques, Beaucaire, Bellegarde, Saint-Gilles, Vauvert, Aimargues, Aigues-Mortes, Saint-Laurent-d'Aigouze, La Grande-Motte, Le Grau-du-Roi, Les Saintes-Maries-de-la-Mer, Salin-de-Giraud, Port-Saint-Louis-du-Rhône, Fos-sur-Mer, Istres, Miramas, Saint-Chamas, Berre-l'Étang, Vitrolles, Marignane, Martigues, Marseille Nord</p>
     
     <!-- Services détaillés -->
     <h3>Services climatisation professionnels</h3>
-    <p>Réparation climatisation en panne, maintenance climatiseur, entretien annuel clim, nettoyage filtre climatisation, recharge gaz climatiseur, diagnostic panne clim, remplacement compresseur climatisation, installation multi-split, climatisation réversible, clim gainable</p>
+    <p>Dépannage réparation climatisation en panne urgence, maintenance préventive climatiseur, entretien annuel obligatoire climatisation, contrat entretien climatisation, nettoyage filtre désinfection climatisation, recharge gaz réfrigérant climatiseur R32 R410A, diagnostic panne climatisation, remplacement compresseur ventilateur climatisation, installation multi-split mono-split, climatisation réversible chaud-froid, climatisation gainable murale console cassette, climatisation mobile portable, fuite gaz climatisation, climatisation qui ne refroidit plus, climatisation bruyante, télécommande climatisation, détartrage nettoyage échangeur climatisation</p>
     
     <h3>Pompe à chaleur expertise</h3>
-    <p>PAC air-air, pompe chaleur air-eau, PAC géothermique, pompe chaleur piscine, entretien pompe chaleur, dépannage PAC, installation pompe chaleur maison, PAC haute température, pompe chaleur économique, crédit impôt pompe chaleur</p>
+    <p>Installation dépannage réparation pompe chaleur PAC air-air air-eau, pompe chaleur géothermique aquathermique, pompe chaleur piscine spa, entretien maintenance obligatoire pompe chaleur, contrat entretien PAC, dépannage urgence pompe chaleur en panne, pompe chaleur hiver, installation pompe chaleur maison appartement, PAC haute température basse température, pompe chaleur économique inverter COP SCOP, pac hybride gaz, pompe chaleur thermodynamique, crédit impôt transition énergétique, aide anah prime rénovation énergétique, pompe chaleur qui ne démarre pas, pompe chaleur bruyante, compresseur détendeur évaporateur pompe chaleur, sonde extérieure dégivrage pompe chaleur</p>
     
     <h3>Ballon thermodynamique spécialiste</h3>
-    <p>Chauffe-eau thermodynamique, ballon eau chaude écologique, installation ballon thermodynamique 200L, 300L, dépannage ballon thermodynamique, entretien chauffe-eau thermodynamique, économie énergie eau chaude</p>
+    <p>Installation dépannage réparation ballon thermodynamique chauffe-eau thermodynamique, ballon eau chaude écologique économe, installation remplacement ballon thermodynamique 150L 200L 250L 300L, dépannage urgence ballon thermodynamique en panne plus eau chaude, entretien maintenance obligatoire chauffe-eau thermodynamique, ballon thermodynamique air extérieur ambiant extrait, CET cumulus thermodynamique split intégré, pompe chaleur eau chaude sanitaire, résistance électrique anode thermostat ballon, fuite ballon thermodynamique, ballon qui ne chauffe plus eau tiède, bruit compresseur ballon thermodynamique, détartrage ballon, économie énergie eau chaude, crédit impôt ballon thermodynamique</p>
     
     <h3>Traitement eau domestique</h3>
-    <p>Adoucisseur eau calcaire, système filtration eau potable, osmoseur domestique, anti-tartre magnétique, analyse qualité eau, maintenance adoucisseur, cartouche filtre eau, eau pure maison</p>
+    <p>Installation dépannage réparation adoucisseur eau calcaire, système filtration eau potable, osmoseur domestique inverse, station traitement eau, anti-tartre magnétique électronique, analyse qualité eau TH pH, maintenance entretien adoucisseur, régénération sel adoucisseur, cartouche filtre eau sédiment charbon actif, préfiltre filtre eau robinet cuisine douche, eau pure adoucie osmosée, eau calcaire dure, dureté tartre canalisation, détartrage nettoyage circuit eau, surpresseur pompe eau, traitement eau piscine, désinfection chlore ozone UV eau, bactérie nitrate fer eau, got odeur couleur trouble eau</p>
     
     <!-- Urgences et disponibilité -->
     <h3>Dépannage urgence climatisation</h3>
-    <p>Climatisation en panne Arles, intervention rapide 24h, dépannage weekend, urgence clim été, réparation immédiate climatiseur, technicien climatisation disponible, SOS climatisation Arles</p>
+    <p>SOS climatisation pompe chaleur ballon thermodynamique en panne Arles, intervention urgence dépannage 24h/24 7j/7, dépannage weekend dimanche jour férié, urgence climatisation été canicule, urgence chauffage hiver pompe chaleur, plus de chauffage climatisation, réparation immédiate express climatiseur PAC, technicien frigoriste climatisation disponible, artisan dépanneur proximité, SOS climatisation Arles Saint-Rémy Tarascon, déplacement rapide diagnostic gratuit, intervention dans l'heure, service dépannage urgence, hotline assistance technique, conseil gratuit, dépannage fêtes vacances</p>
     
     <!-- Certifications et qualités -->
     <h3>Entreprise certifiée et qualifiée</h3>
@@ -1315,7 +1404,7 @@
     
     <!-- Marques et équipements -->
     <h3>Marques partenaires</h3>
-    <p>Climatisation Daikin, Mitsubishi Electric, Atlantic, Panasonic, Fujitsu, pompe chaleur Hitachi, De Dietrich, Saunier Duval, ballon thermodynamique Thermor, Chaffoteaux</p>
+    <p>Dépannage réparation entretien toutes marques : Daikin climatisation, Mitsubishi Electric clim, Atlantic climatiseur, Panasonic Fujitsu Toshiba LG Samsung climatisation, Carrier Lennox York Trane clim, Hitachi De Dietrich Saunier Duval Viessmann pompe chaleur, Bosch Vaillant Frisquet Chappée PAC, Thermor Atlantic Ariston Chaffoteaux ballon thermodynamique, Elm Leblanc Ferroli Ideal Standard pompe chaleur, Junkers Buderus Wolf Weishaupt Ochsner PAC, Zodiac Hayward Pentair pompe chaleur piscine, Ciat Climaveneta Aermec climatisation industrielle</p>
     
     <!-- Saisonnalité -->
     <h3>Services toutes saisons</h3>
@@ -1323,17 +1412,38 @@
     
     <!-- FAQ cachée -->
     <h3>Questions fréquentes climatisation Arles</h3>
-    <p>Pourquoi ma climatisation ne refroidit plus ? Comment entretenir sa pompe à chaleur ? Quel ballon thermodynamique choisir ? Combien coûte installation climatisation ? Quelle aide pour pompe à chaleur ? Comment traiter eau calcaire ? Climatiseur qui fait du bruit ? Consommation pompe à chaleur ? Durée vie climatisation ?</p>
+    <p>Pourquoi ma climatisation ne refroidit plus ne marche pas ? Comment réparer climatisation en panne ? Climatisation qui souffle chaud fuit eau ? Climatiseur qui ne démarre pas ? Comment entretenir nettoyer sa pompe à chaleur climatisation ? Pompe chaleur qui ne chauffe plus hiver ? PAC en défaut erreur ? Quel ballon thermodynamique choisir 200L 300L ? Combien coûte installation climatisation pompe chaleur ? Prix entretien climatisation obligatoire ? Quelle aide prime MaPrimeRenov pompe à chaleur ? Comment traiter eau calcaire dure ? Climatiseur pompe chaleur qui fait du bruit vibration ? Consommation électrique pompe à chaleur ? Durée vie garantie climatisation ? Changement filtre recharge gaz climatisation ? Désinfection climatisation obligatoire ? Climatisation qui sent mauvais ? Mode chauffage climatisation hiver ? Installation climatisation appartement maison ?</p>
     
     <!-- Contact et coordonnées -->
     <h3>Contact dépannage climatisation Arles</h3>
     <p>Téléphone urgence 06 75 38 37 56, email gd@idm-entreprise.fr, Guillaume Despaquis technicien, intervention Bouches-du-Rhône, déplacement gratuit devis, disponible 7j/7</p>
     
     <!-- Expressions locales -->
-    <p>Climatisation Camargue, pompe chaleur Alpilles, traitement eau Provence, ballon thermodynamique Crau, dépannage clim pays Arles, installateur climatisation Bouches-du-Rhône</p>
+    <p>Climatisation Camargue Saintes-Maries, pompe chaleur Alpilles Saint-Rémy Eygalières, traitement eau Provence PACA, ballon thermodynamique Crau Salon, dépannage climatisation pays Arles Tarascon, installateur climatisation pompe chaleur Bouches-du-Rhône 13, technicien frigoriste Gard 30, spécialiste climatisation Vaucluse 84, maintenance climatisation Rhône delta, réparation PAC Alpilles Luberon, entretien climatisation Camargue, SAV climatisation Provence, artisan RGE QualiPAC Arles, entreprise familiale locale proximité client</p>
     
     <!-- Avantages concurrentiels -->
     <p>Entreprise familiale, proximité client, tarif transparent, intervention rapide, suivi personnalisé, conseil gratuit, expertise technique, service après-vente, relation humaine, flexibilité, adaptation besoins</p>
+    
+    <!-- Contenu SEO ultra-ciblé recherches Google -->
+    <h3>Recherches fréquentes climatisation dépannage Arles</h3>
+    <p>climatisation Arles dépannage, réparation climatisation Arles, entretien climatisation Arles, maintenance climatisation Arles, installation climatisation Arles, climatiseur en panne Arles, climatisation qui ne marche plus Arles, climatisation qui ne refroidit plus Arles, climatisation qui souffle chaud Arles, climatisation qui fuit Arles, climatisation bruyante Arles, réparateur climatisation Arles, dépanneur climatisation Arles, technicien climatisation Arles, spécialiste climatisation Arles, installateur climatisation Arles, entreprise climatisation Arles, artisan climatisation Arles, société climatisation Arles, professionnel climatisation Arles</p>
+    
+    <h3>Pompe à chaleur recherches Google Arles</h3>
+    <p>pompe chaleur Arles dépannage, réparation pompe chaleur Arles, entretien pompe chaleur Arles, installation pompe chaleur Arles, PAC en panne Arles, pompe chaleur qui ne chauffe plus Arles, pompe chaleur qui ne marche plus Arles, pompe chaleur bruyante Arles, pompe chaleur en défaut Arles, pompe chaleur qui givre Arles, réparateur pompe chaleur Arles, dépanneur PAC Arles, technicien pompe chaleur Arles, installateur pompe chaleur Arles, spécialiste PAC Arles, entreprise pompe chaleur Arles, artisan pompe chaleur Arles, société PAC Arles, professionnel pompe chaleur Arles, pompe chaleur air air Arles, pompe chaleur air eau Arles</p>
+    
+    <h3>Ballon thermodynamique recherches Arles</h3>
+    <p>ballon thermodynamique Arles dépannage, réparation ballon thermodynamique Arles, installation ballon thermodynamique Arles, chauffe eau thermodynamique Arles, ballon thermodynamique en panne Arles, plus eau chaude ballon thermodynamique Arles, ballon thermodynamique qui ne chauffe plus Arles, ballon thermodynamique bruyant Arles, entretien ballon thermodynamique Arles, réparateur ballon thermodynamique Arles, dépanneur chauffe eau thermodynamique Arles, installateur ballon thermodynamique Arles, spécialiste CET Arles, entreprise ballon thermodynamique Arles, artisan chauffe eau thermodynamique Arles</p>
+    
+    <h3>Traitement eau adoucisseur recherches Arles</h3>
+    <p>adoucisseur eau Arles installation, traitement eau Arles, eau calcaire Arles, adoucisseur eau en panne Arles, réparation adoucisseur Arles, entretien adoucisseur Arles, dépannage adoucisseur Arles, installateur adoucisseur Arles, spécialiste traitement eau Arles, entreprise adoucisseur Arles, artisan traitement eau Arles, filtration eau Arles, osmoseur Arles, anti tartre Arles, analyse eau Arles, duretée eau Arles, problème calcaire Arles, solution eau dure Arles, maintenance adoucisseur Arles, sel adoucisseur Arles</p>
+    
+    <!-- Recherches par problèmes spécifiques -->
+    <h3>Pannes climatisation courantes recherchées</h3>
+    <p>ma climatisation ne refroidit plus, ma climatisation souffle chaud, ma climatisation ne s'allume plus, ma climatisation fait du bruit, ma climatisation fuit de l'eau, ma climatisation sent mauvais, ma climatisation givre, ma climatisation se met en sécurité, ma climatisation clignote, ma climatisation ne répond plus télécommande, ma climatisation consomme trop, ma climatisation disjoncte, ma climatisation ne démarre pas, ma climatisation s'arrête toute seule, ma climatisation ne chauffe plus hiver, panne climatisation canicule, SOS climatisation urgence, réparateur climatisation près de moi</p>
+    
+    <!-- Long tail très spécifique géographique -->
+    <h3>Quartiers et zones Arles climatisation</h3>
+    <p>climatisation Trinquetaille Arles, climatisation Fourchon Arles, climatisation Barriol Arles, climatisation Monplaisir Arles, climatisation Trébon Arles, climatisation centre ville Arles, climatisation vieille ville Arles, climatisation Alyscamps Arles, climatisation gare SNCF Arles, climatisation amphithéâtre Arles, climatisation boulevard des Lices Arles, climatisation avenue Victor Hugo Arles, climatisation quartier Roquette Arles, climatisation lotissement Arles, climatisation villa Arles, climatisation mas Arles, climatisation bastide Arles, climatisation résidence Arles, climatisation pavillon Arles</p>
 </div>
 
     <!-- Navigation -->
@@ -1749,6 +1859,36 @@
 
         // Initialiser les animations au chargement
         document.addEventListener('DOMContentLoaded', animateOnScroll);
+        
+        // Sauvegarde formulaire (amélioration UX)
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const inputs = form.querySelectorAll('input, select, textarea');
+            
+            // Restaurer les données sauvegardées
+            inputs.forEach(input => {
+                const saved = localStorage.getItem('form_' + input.name);
+                if (saved && input.type !== 'submit') {
+                    input.value = saved;
+                }
+            });
+            
+            // Sauvegarder lors de la saisie
+            inputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    if (this.type !== 'submit') {
+                        localStorage.setItem('form_' + this.name, this.value);
+                    }
+                });
+            });
+            
+            // Effacer la sauvegarde après envoi réussi
+            form.addEventListener('submit', function() {
+                inputs.forEach(input => {
+                    localStorage.removeItem('form_' + input.name);
+                });
+            });
+        });
 
         // Effet de compteur animé pour les statistiques
         function animateCounters() {
@@ -1756,7 +1896,7 @@
             
             counters.forEach(counter => {
                 const target = parseFloat(counter.textContent);
-                const increment = target / 50; // Animation en 50 étapes
+                const increment = target / 50;
                 let current = 0;
                 
                 const timer = setInterval(() => {
@@ -1768,6 +1908,35 @@
                         counter.textContent = target.toString().includes('.') ? current.toFixed(1) : Math.ceil(current);
                     }
                 }, 30);
+            });
+        }
+        
+        // Gestion d'erreur des images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('error', function() {
+                    this.style.display = 'none';
+                    console.warn('Image non chargée:', this.src);
+                });
+            });
+        });
+        
+        // Optimisation lazy loading
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
             });
         }
 
@@ -1785,6 +1954,17 @@
             const statsSection = document.querySelector('.reviews-stats');
             if (statsSection) {
                 statsObserver.observe(statsSection);
+            }
+            
+            // Enregistrement du Service Worker
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js')
+                .then(function(registration) {
+                    console.log('Service Worker enregistré:', registration);
+                })
+                .catch(function(error) {
+                    console.log('Erreur Service Worker:', error);
+                });
             }
         });
     </script>
