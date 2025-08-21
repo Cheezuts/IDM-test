@@ -1,0 +1,27 @@
+{
+  "name": "IDM Entreprise - Climatisation Arles",
+  "short_name": "IDM Entreprise",
+  "description": "Spécialiste dépannage climatisation à Arles, Saint-Rémy-de-Provence, Tarascon. Installation pompe à chaleur, ballon thermodynamique, traitement de l'eau.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#32b4cf",
+  "theme_color": "#32b4cf",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "logo idm-entreprise.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "logo idm-entreprise.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["business", "utilities"],
+  "lang": "fr",
+  "dir": "ltr"
+}
