@@ -1,9 +1,9 @@
 // Service Worker pour IDM Entreprise
-const CACHE_NAME = 'idm-entreprise-v1.0';
+const CACHE_NAME = 'idm-entreprise-v1.1';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/logo idm-entreprise.png',
+  '/logo-idm-entreprise-optimized.png',
   '/manifest.json',
   '/favicon.ico',
   // Images principales

@@ -2,7 +2,7 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="logo idm-entreprise.png"/>
+            <square150x150logo src="logo-idm-entreprise-optimized.png"/>
             <TileColor>#32b4cf</TileColor>
         </tile>
     </msapplication>
