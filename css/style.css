@@ -613,6 +613,37 @@ form {
     min-height: 100px;
 }
 
+.form-consent {
+    margin-bottom: 20px;
+}
+
+.consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.consent-label input[type="checkbox"] {
+    width: auto;
+    margin-top: 3px;
+    flex-shrink: 0;
+    accent-color: #32b4cf;
+}
+
+.consent-label a {
+    color: #32b4cf;
+    text-decoration: underline;
+}
+
+.consent-label a:hover {
+    color: #2a9bb8;
+}
+
 .submit-btn {
     background: #32b4cf;
     color: white;

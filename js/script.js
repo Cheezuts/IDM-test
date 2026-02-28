@@ -87,14 +87,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     inputs.forEach(function(input) {
         var saved = localStorage.getItem('form_' + input.name);
-        if (saved && input.type !== 'submit') {
+        if (saved && input.type !== 'submit' && input.type !== 'checkbox') {
             input.value = saved;
         }
     });
 
     inputs.forEach(function(input) {
         input.addEventListener('input', function() {
-            if (this.type !== 'submit') {
+            if (this.type !== 'submit' && this.type !== 'checkbox') {
                 localStorage.setItem('form_' + this.name, this.value);
             }
         });
