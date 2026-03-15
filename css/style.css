@@ -1219,6 +1219,46 @@ img[src=""], img:not([src]) {
     padding-top: 80px;
 }
 
+/* Avis page hero */
+.avis-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.avis-hero-content h1 {
+    font-size: 2.8rem;
+    color: #32b4cf;
+    margin-bottom: 1rem;
+}
+
+.avis-hero-content p {
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+.avis-hero-stars span {
+    color: #f5c518;
+    font-size: 2rem;
+    margin: 0 3px;
+}
+
+.avis-google {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .avis-hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
 /* Homepage sections */
 .home-section {
     padding: 5rem 2rem;
